@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { Main } from './components/Main';
+import { Footer as FooterJJ } from './components/Footer';
 
 function App() {
+
+  const fruits = ['🍇', '🍉', '🍌', '🍍', '🪱'];
+
+  const number = 1_000_000;
+
+  const f1 = (event) => {
+    console.log('press clic', event);
+    console.log(number);
+    alert('Test');
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="HTML ATTRIBUTE PROPS" onAlgo={f1} />
+      <Main>{fruits}</Main>
+      <FooterJJ />
+    </>
   );
 }
 
